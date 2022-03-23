@@ -1,0 +1,95 @@
+"""
+-------------------------------------------------------
+Lab  Testing
+-------------------------------------------------------
+Author:  Dev Patel
+ID:      212325400
+Email:   pate5400@mylaurier.ca
+Version: 2022-01-30
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t01
+-------------------------------------------------------
+[33, 22, 55, 44, 11]
+
+-------------------------------------------------------
+t02
+-------------------------------------------------------
+the queue is [33, 22, 55, 44]
+the new queue is after remove [22, 55, 44]
+
+-------------------------------------------------------
+t03
+-------------------------------------------------------
+Array to Queue
+source:['dev', 'patel', 2]
+queue:['dev', 'patel', 2]
+
+Queue to Array
+original queue:
+['dev', 'patel', 2]
+returned array:
+['dev', 'patel', 2]
+
+elements of queue :
+------------
+Food menu
+
+check stack empty/not: False
+inserting element to queue:1
+inserting element to queue:2
+inserting element to queue:3
+
+check queue after insert empty/not :False
+final elements of queue:
+------------
+Food menu
+1
+2
+3
+remove ------------ from the queue
+peek the queue: Food menu
+
+
+-------------------------------------------------------
+t04
+-------------------------------------------------------
+value [1, 2, 3]
+pq:[1, 2, 3]
+peek:
+1
+
+-------------------------------------------------------
+t05
+-------------------------------------------------------
+original pq :[1, 2, 3]
+remove:1
+new pq :[2, 3]
+
+-------------------------------------------------------
+t06
+-------------------------------------------------------
+Array tp pq
+source:[11, 22, 33, 44]
+pq:[11, 22, 33, 44]
+
+pq to Array
+pq:[11, 22, 33, 44]
+target:[11, 22, 33, 44]
+
+
+Is this queue empty:True
+Name:       BBQ Pork
+Origin:     Chinese
+Vegetarian: False
+Calories:   920 was removed
+Name:       Lasagna
+Origin:     Italian
+Vegetarian: False
+Calories:   135
+Name:       Lasagna
+Origin:     Italian
+Vegetarian: False
+Calories:   135 was peeked
+

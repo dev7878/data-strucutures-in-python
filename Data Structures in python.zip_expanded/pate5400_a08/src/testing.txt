@@ -1,0 +1,93 @@
+"""
+-------------------------------------------------------
+Lab/Assignment  Testing
+-------------------------------------------------------
+Author:  your name
+ID:      your ID
+Email:   your Laurier email address
+Version: yyyy-mm-dd
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t01
+-------------------------------------------------------
+The BST is valid?: 
+True
+
+The BST is balanced?: 
+False
+
+The BSTs are identical?: 
+False
+
+Minimum value in BST: 
+0
+
+Number of nodes with 0 children: 
+3
+
+Number of nodes with 1 child: 
+2
+
+Number of nodes with 2 children: 
+2
+
+Values in order from bst: 
+[0, 2, 3, 4, 7, 9, 10]
+
+Values in preorder from bst: 
+[4, 2, 0, 3, 7, 9, 10]
+
+Values in postorder from bst: 
+[0, 3, 2, 10, 9, 7, 4]
+
+Values in levelorder from bst: 
+[4, 2, 7, 0, 3, 9, 10]
+
+Removed Value: 
+3
+
+Printing Updated BST: 
+4
+2
+7
+0
+9
+10
+
+-------------------------------------------------------
+t02
+-------------------------------------------------------
+Comparing by order: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Total Comparisons:  31,250,743
+
+Comparing by order: MFTCJPWADHKNRUYBEIGLOQSVXZ
+Total Comparisons:  9,645,918
+
+-------------------------------------------------------
+t03
+-------------------------------------------------------
+Comparing by order: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Total Comparisons:  31,250,743
+
+Comparing by order: MFTCJPWADHKNRUYBEIGLOQSVXZ
+Total Comparisons:  9,645,918
+
+Comparing by order: ETAOINSHRDLUCMPFYWGBVKJXZQ
+Total Comparisons:  8,856,167
+
+-------------------------------------------------------
+t04
+-------------------------------------------------------
+
+-------------------------------------------------------
+t05
+-------------------------------------------------------
+
+-------------------------------------------------------
+t06
+-------------------------------------------------------
+
+-------------------------------------------------------
+t07
+-------------------------------------------------------

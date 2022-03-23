@@ -1,0 +1,187 @@
+"""
+-------------------------------------------------------
+Assignment  Testing
+-------------------------------------------------------
+Author:  Dev Patel
+ID:      212325400
+Email:   pate5400mylaurier
+Version: 2022-01-26
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t01
+-------------------------------------------------------
+the first stack is 
+8
+6
+4
+2
+the second stack is 
+7
+5
+3
+1
+
+the combined stack is 
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+
+the first stack is 
+5
+8
+12
+8
+the second stack is 
+3
+6
+1
+7
+9
+14
+
+the combined stack is 
+14
+9
+7
+8
+1
+12
+6
+8
+3
+5
+
+-------------------------------------------------------
+t02
+-------------------------------------------------------
+the first stack is 
+5
+8
+12
+8
+the second stack is 
+3
+6
+1
+7
+9
+14
+
+the combined stack is 
+14
+9
+7
+8
+1
+12
+6
+8
+3
+5
+
+s1p4
+s1p3
+s1p2
+s1p1
+the second stack is 
+s2p3
+s2p2
+s2p1
+
+the combined stack is 
+s1p1
+s2p1
+s1p2
+s2p2
+s1p3
+s2p3
+s1p4
+
+-------------------------------------------------------
+t03
+-------------------------------------------------------
+The original stack is 
+4
+3
+2
+1
+The reversed stack is
+1
+2
+3
+4
+
+
+The original stack is 
+4
+3
+element2
+element1
+The reversed stack is
+element1
+element2
+3
+4
+
+-------------------------------------------------------
+t04
+-------------------------------------------------------
+The original stack is 
+4
+3
+2
+1
+The reversed stack is
+1
+2
+3
+4
+
+-------------------------------------------------------
+t05
+-------------------------------------------------------
+Enter the stringotto
+True
+Enter the stringAble is Able
+False
+
+-------------------------------------------------------
+t06
+-------------------------------------------------------
+in values:[1, 2, 3, 4]
+opstring:SSXSSXXX
+values in  : []
+Stack : empty
+values out:[2, 4, 3, 1]
+
+
+in values:[1, 2, 3, 4]
+opstring:SXXSSXXS
+values in  : []
+stack : not empty
+values out:None
+
+in values:['car1', 'car2', 'car3', 'car4', 'car5']
+opstring:SSSSSXXXXX
+values in  : []
+Stack : empty
+values out:['car5', 'car4', 'car3', 'car2', 'car1']
+
+
+in values:['car1', 'car2']
+opstring:SXSX
+values in  : []
+Stack : empty
+values out:['car1', 'car2']
+
+-------------------------------------------------------
+t07
+-------------------------------------------------------
