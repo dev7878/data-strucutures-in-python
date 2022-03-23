@@ -5,7 +5,7 @@
 Author:  Dev Patel
 ID:      212325400
 Email:   pate5400@mylaurier.ca
-__updated__ = "2022-03-12"
+__updated__ = "2022-03-22"
 -------------------------------------------------------
 """
 # Imports
@@ -18,5 +18,5 @@ fill_letter_bst(bst, DATA1)
 text = "My name is David Brown"
 code = encode_morse(bst, text)
 print(text)
-print("encoded")
+print("encoded  bst ")
 print(code)
