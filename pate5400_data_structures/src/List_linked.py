@@ -5,7 +5,7 @@
 Author:  Dev Patel
 ID:      212325400
 Email:   pate5400@mylaurier.ca
-__updated__ = "2022-03-12"
+__updated__ = "2022-03-26"
 -------------------------------------------------------
 """
 # Imports
@@ -602,23 +602,6 @@ class List:
                 self._rear = previous
         return value
 
-    def _swap(self, pln, prn):
-        """
-        -------------------------------------------------------
-        Swaps the position of two nodes. The nodes in pln.next and prn.next 
-        have been swapped, and all links to them updated.
-        Use: self._swap(pln, prn)
-        -------------------------------------------------------
-        Parameters:
-            pln - node before list node to swap (_List_Node)
-            prn - node before list node to swap (_List_Node)
-        Returns:
-            None
-        -------------------------------------------------------
-        """
-        # your code here
-        return
-
     def is_identical(self, other):
         """
         ---------------------------------------------------------
@@ -1160,6 +1143,51 @@ class List:
         -------------------------------------------------------
         """
         # your code here
+        return
+
+    def _swap(self, pln, prn):
+        """
+        -------------------------------------------------------
+        Swaps the position of two nodes. The nodes in pln.next and prn.next 
+        have been swapped, and all links to them updated.
+        Use: self._swap(pln, prn)
+        -------------------------------------------------------
+        Parameters:
+            pln - node before list node to swap (_List_Node)
+            prn - node before list node to swap (_List_Node)
+        Returns:
+            None
+        -------------------------------------------------------
+        """
+        if pln is not prn:
+            # Swap only if two nodes are not the same node
+
+            if pln is None:
+                # Make r the new front
+                left = self._front
+                self._front = prn._next
+            else:
+                left = pln._next
+                pln._next = prn._next
+
+            if prn is None:
+                # Make l the new front
+                right = self._front
+                self._front = left
+            else:
+                right = prn._next
+                prn._next = left
+
+            # Swap next pointers
+            # lst._next, r._next = r._next, lst._next
+            temp = left._next
+            left._next = right._next
+            right._next = temp
+            # Update the rear
+            if right._next is None:
+                self._rear = right
+            elif left._next is None:
+                self._rear = left
         return
 
     def __iter__(self):

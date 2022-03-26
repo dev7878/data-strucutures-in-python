@@ -5,23 +5,10 @@
 Author:  Dev Patel
 ID:      212325400
 Email:   pate5400@mylaurier.ca
-__updated__ = "2022-03-12"
+__updated__ = "2022-03-26"
 -------------------------------------------------------
 """
 # Imports
-
-# Constants
-"""
--------------------------------------------------------
-Linked version of the Sorted_List ADT.
--------------------------------------------------------
-Author:  David Brown
-ID:      999999999
-Email:   dbrown@wlu.ca
-Term:    Spring 2021
-__updated__ = "2022-02-09"
--------------------------------------------------------
-"""
 # Imports
 from copy import deepcopy
 
