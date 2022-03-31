@@ -701,21 +701,21 @@ class Sorts:
             None
         -------------------------------------------------------
         """
-        len = len(a)
-        if len > 0:
+
+        if len(a) > 0:
             max_figures = floor(log(max(a), 10) + 1)
             bucket = []
             for i in range(10):
                 bucket.append([])
-                for j in range(max_figures):
-                    for digit in a:
-                        curr_digit = digit % ((10**j) * j) // (10 * j)
-                        bucket[curr_digit].append(j)
-                    index = 0
-                    for num in bucket:
-                        while len(num) > 0:
-                            a[index] = num.pop(0)
-                            index += 1
+            for j in range(max_figures):
+                for digit in a:
+                    curr_digit = digit % ((10**j) * 10) // (10 ** j)
+                    bucket[curr_digit].append(digit)
+                index = 0
+                for num in bucket:
+                    while len(num) > 0:
+                        a[index] = num.pop(0)
+                        index += 1
         return
 
     @staticmethod
@@ -731,3 +731,13 @@ class Sorts:
             None
         -------------------------------------------------------
         """
+        index = 0
+        while index < len(a):
+            if index == 0:
+                index += 1
+            else:
+                if a[index] < a[index - 1]:
+                    a[index], a[index - 1] = a[index - 1], a[index]
+                index += 1
+
+        return

@@ -5,7 +5,7 @@
 Author:  Dev Patel
 ID:      212325400
 Email:   pate5400@mylaurier.ca
-__updated__ = "2022-03-26"
+__updated__ = "2022-03-31"
 -------------------------------------------------------
 """
 # Imports
@@ -601,6 +601,36 @@ class List:
                 # Last node was removed, update _rear.
                 self._rear = previous
         return value
+
+    def _append_list(self, source):
+        """
+        -------------------------------------------------------
+        Helper method to append the entire source list to the rear of the target list.
+        The source list becomes empty.
+        Use: target._append_list(source)
+        -------------------------------------------------------
+        Parameters:
+            source - an linked list (List)
+        Returns:
+            None
+        -------------------------------------------------------
+        """
+        assert source._front is not None, "Cannot append an empty queue"
+
+        # Update the target queue
+        if self._rear is None:
+            # Current queue is empty.
+            self._front = source._front
+        else:
+            self._rear._next = source._front
+
+        self._rear = source._rear
+        self._count += source._count
+        # Empty the source queue.
+        source._front = None
+        source._rear = None
+        source._count = 0
+        return
 
     def is_identical(self, other):
         """

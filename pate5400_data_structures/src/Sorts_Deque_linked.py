@@ -43,9 +43,16 @@ class Sorts:
             None
         -------------------------------------------------------
         """
-
-        # your code here
-
+        cur = a._front
+        while cur != None:
+            if a._front == cur:
+                cur = cur._next
+            else:
+                if cur != None:
+                    if cur._value < cur._prev._value:
+                        a._swap(cur._prev, cur)
+                    else:
+                        cur = cur._next
         return
 
     # Sort Utilities

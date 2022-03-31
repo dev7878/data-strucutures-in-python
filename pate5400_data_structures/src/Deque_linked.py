@@ -5,7 +5,7 @@
 Author:  Dev Patel
 ID:      212325400
 Email:   pate5400@mylaurier.ca
-__updated__ = "2022-03-12"
+__updated__ = "2022-03-31"
 -------------------------------------------------------
 """
 # Imports
@@ -216,39 +216,58 @@ class Deque:
         -------------------------------------------------------
         """
         assert l is not None and r is not None, "nodes to swap cannot be None"
-        # your code here
-        if l is not r:
-            l._prev = r._prev
-            r._prev = l._prev
-            l._next = r._next
-            r._next = l._next
-            if l._prev == l:
-                l._prev = r
-            elif l._next == l:
-                l._next = r
 
-            if r._prev == r:
-                r._prev = l
-            elif r._next == r:
-                r._next = l
+        # Possible solution involves just switching the values instead
+        # Didn't include that as it might  lead to lower marks
+        # In this case, python will switch the value in one line
+        # This works because the both sides are evaluated together
+        # Therefore the value are placed and then assigned at the same time
+        # l._value, r._value = r._value, l._value
 
-            if l._prev != None:
-                l._prev._next = l
-            if l._next != None:
-                l._next._prev = l
-            if r._prev != None:
-                r._prev._next = r
-            if r._next != None:
-                r._next._prev = r
-
-            if l._next == None:
-                self._rear = l
-            elif l._prev == None:
-                self._front = l
-            if r._prev == None:
-                self._front = r
-            elif r._next == None:
-                self._rear = r
+        # Solution included:
+        PREVL = l._prev
+        NEXTL = l._next
+        PREVR = r._prev
+        NEXTR = r._next
+        if l == self._front:
+            self._front = r
+        elif r == self._front:
+            self._front = l
+        if l == self._rear:
+            self._rear = r
+        elif r == self._rear:
+            self._rear = l
+        if NEXTL == r:
+            l._prev = r
+            l._next = NEXTR
+            r._prev = PREVL
+            r._next = l
+            if PREVL != None:
+                PREVL._next = r
+            if NEXTR != None:
+                NEXTR._prev = l
+        elif PREVL == r:
+            l._prev = PREVR
+            l._next = r
+            r._prev = l
+            r._next = NEXTL
+            if NEXTL != None:
+                NEXTL._prev = r
+            if PREVR != None:
+                PREVR._next = l
+        else:
+            l._prev = PREVR
+            l._next = NEXTR
+            r._prev = PREVL
+            r._next = NEXTL
+            if PREVL != None:
+                PREVL._next = r
+            if NEXTL != None:
+                NEXTL._prev = r
+            if PREVR != None:
+                PREVR._next = l
+            if NEXTR != None:
+                NEXTR._prev = l
         return
 
     def __iter__(self):

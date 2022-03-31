@@ -11,7 +11,7 @@ __updated__ = "2022-03-31"
 """
 
 # Imports
-from math import log
+from math import log, floor
 from List_linked import List
 
 
@@ -362,4 +362,17 @@ class Sorts:
             None
         -------------------------------------------------------
         """
+
+        if len(a) > 0:
+            max_figures = floor(log(max(a), 10) + 1)
+            bucket = []
+            for i in range(10):
+                bucket.append(List())
+            for j in range(max_figures):
+                while not a.is_empty():
+                    curr_digit = a._front._value % ((10**j) * 10) // (10 ** j)
+                    bucket[curr_digit]._move_front_to_rear(a)
+                for num in bucket:
+                    if not num.is_empty():
+                        a._append_list(num)
         return
