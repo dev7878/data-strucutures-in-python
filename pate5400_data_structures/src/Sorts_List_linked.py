@@ -6,7 +6,7 @@ Author: Dev Patel
 ID:     212325400
 Email:  pate5400@mylaurier.ca
 Term:    Winter 2020
-__updated__ = "2022-03-26"
+__updated__ = "2022-03-31"
 -------------------------------------------------------
 """
 
@@ -348,3 +348,18 @@ class Sorts:
             else:
                 is_sorted = False
         return is_sorted
+
+    @staticmethod
+    def radix_sort(a):
+        """
+        -------------------------------------------------------
+        Performs a base 10 radix sort.
+        Use: radix_sort(a)
+        -------------------------------------------------------
+        Parameters:
+            a - a List of base 10 integers (List)
+        Returns:
+            None
+        -------------------------------------------------------
+        """
+        return

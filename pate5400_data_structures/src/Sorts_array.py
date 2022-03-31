@@ -6,11 +6,11 @@ Author:  Dev Patel
 ID:      212325400
 Email:   pate5400@wlu.ca
 Term:    Winter 2020
-__updated__ = "2022-03-26"
+__updated__ = "2022-03-31"
 -------------------------------------------------------
 """
 # Imports
-from math import log, ceil
+from math import log, ceil, floor
 from BST_linked import BST
 
 
@@ -667,3 +667,67 @@ class Sorts:
 
         a[i] = a[j]
         return
+
+    @staticmethod
+    def counting_sort(a):
+        if len(a) > 0:
+            # Find the largest value in a and set up a counting
+            # array with a size of the value range.
+            counting = [0] * (max(a) + 1)
+
+        # Store the count for each value.
+            for v in a:
+                counting[v] += 1
+
+            i = 0
+
+            for v in range(len(counting)):
+                for _ in range(counting[v]):
+                    # Copy each value counting[v] times back into a.
+                    a[i] = v
+                    i += 1
+        return
+
+    @staticmethod
+    def radix_sort(a):
+        """
+        -------------------------------------------------------
+        Performs a base 10 radix sort.
+        Use: Sorts.radix_sort(a)
+        -------------------------------------------------------
+        Parameters:
+            a - an array of base 10 integers (list)
+        Returns:
+            None
+        -------------------------------------------------------
+        """
+        len = len(a)
+        if len > 0:
+            max_figures = floor(log(max(a), 10) + 1)
+            bucket = []
+            for i in range(10):
+                bucket.append([])
+                for j in range(max_figures):
+                    for digit in a:
+                        curr_digit = digit % ((10**j) * j) // (10 * j)
+                        bucket[curr_digit].append(j)
+                    index = 0
+                    for num in bucket:
+                        while len(num) > 0:
+                            a[index] = num.pop(0)
+                            index += 1
+        return
+
+    @staticmethod
+    def gnome_sort(a):
+        """
+        -------------------------------------------------------
+        Sorts an array using the Gnome Sort algorithm.
+        Use: gnome_sort(a)
+        -------------------------------------------------------
+        Parameters:
+            a - an array of comparable elements (list)
+        Returns:
+            None
+        -------------------------------------------------------
+        """
